@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    padding-top: 120px;
+    background-color: #1c1c1c;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #e6e6e6;
+    width: 100%;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+
+    .container {
+        display: flex;
+
+        
+            figure {
+                display: flex;
+                width: 100%;
+                align-items: center;
+        
+                figcaption {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            
+            }
+        
+            nav {
+                width: 300px;
+        
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    height: 100%;
+                    list-style: none;
+        
+                    li {
+                        a {
+                            color: #1c1c1c;
+                            font-size: 20px;
+                            font-weight: 400;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+    }
+    
+}
+
+main {
+    padding: 30px;
+
+    #navegationFilms {
+        padding-bottom: 100px;
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 100;
+            letter-spacing: 3px;
+            line-height: 50px;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 50px 0 50px;
+                list-style: none;
+
+                li {
+                    a {
+                        color: white;
+                        background-color: #2f2f2f;
+                        display: block;
+                        width: 130px;
+                        text-align: center;
+                        border-radius: 50px;
+                        padding: 10px;
+                        text-decoration: none;
+
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            background-color: #e6e6e6;
+                            color: #2f2f2f;
+                        }
+                    }
+                }
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+
+            input, button {
+                border: 1px solid #666;
+            }
+
+            input {
+                background-color: #2f2f2f;
+                color: white;
+
+                &::-webkit-input-placeholder {
+                    color: #666;
+                    font-size: 13px;
+                    padding-left: 10px;
+                }
+            }
+
+            button {
+                padding: 8px;
+                font-size: 14px;
+                background-color: #1c1c1c;
+                color: white;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #Listfilms {
+        ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            list-style: none;
+            column-gap: 30px;
+
+            h2 {
+                color: white;
+            }
+
+            li {
+                max-width: 185px;
+                margin-bottom: 50px;
+                cursor: pointer;
+                
+
+                figure {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                h2 {
+                    color: #fff;
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 10px;
+
+                    //conteúdo do título for maior que o conteiner
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header {
+        .container {
+            display: flex;
+            justify-content: center;
+            figure {
+                width: auto;
+            }
+            nav {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        #navegationFilms {
+            h1 {
+                font-size: 13px;
+            }
+        }
+        #Listfilms {
+            #films {
+                justify-content: center;
+            }
+        }
+    }
+}
+
